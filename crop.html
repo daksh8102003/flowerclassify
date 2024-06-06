@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="./assest/rose_9812502.png">
+    <title>flower classification </title>
+</head>
+
+<body class="body1">
+    <header>
+        <h1 class="h1">Flower classification </h1>
+    </header>
+    <main>
+        <form id="myForm" class="search-container">
+            <input type="text" class="searchInput" id="searchInput" placeholder="Enter your search..." required>
+            <button onclick="search()" class="btn" type="submit">Search</button>
+        </form>
+        <div id="searchResults" class="searchResults"></div>
+        
+    </main>
+
+
+    <script>
+
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var searchInputValue = document.getElementById("searchInput").value.trim();
+
+            if (searchInputValue === "") {
+                alert("Please enter a value in the search field");
+            } else {
+               
+                var scriptElement = document.createElement("script");
+                scriptElement.src = "script.js";
+                document.body.appendChild(scriptElement);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
